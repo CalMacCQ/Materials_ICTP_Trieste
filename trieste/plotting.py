@@ -2,7 +2,7 @@ from pytket.backends.backendresult import BackendResult
 import matplotlib.pyplot as plt
 
 
-def plot_results(result: BackendResult, n_strings=4) -> None:
+def plot_results(result: BackendResult, n_strings: int = 4, dark_mode=False) -> None:
     """
     Plots results in a barchart given a BackendResult. the number of stings displayed
     can be specified with the n_strings argument.
@@ -13,7 +13,9 @@ def plot_results(result: BackendResult, n_strings=4) -> None:
     n_most_common_strings = sorted_shots[:n_strings]
     x_axis_values = [str(entry[0]) for entry in n_most_common_strings]  # basis states
     y_axis_values = [entry[1] for entry in n_most_common_strings]  # counts
-    plt.style.use('dark_background')
+
+    if dark_mode:
+        plt.style.use("dark_background")
 
     fig = plt.figure()
     ax = fig.add_axes([0, 0, 0.75, 0.5])
