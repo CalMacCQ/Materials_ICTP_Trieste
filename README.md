@@ -1,3 +1,4 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/CalMacCQ/Materials_ICTP_Trieste/HEAD)
 # ICTP 2023 - Getting Started with TKET
 
 Welcome to ICTP!
@@ -109,8 +110,6 @@ bell_circ.CX(0,1)
 
 # Running a basic simulation
 backend = AerBackend() #initialise AerBackend
-handle = backend.process_circuit(bell_circ, n_shots=1000) # process_circuit for 1000 shots 
-result = backend.get_result(handle) # Retrieve result from handle
-counts_dict = result.get_counts()
-print(counts_dict) # print a dictionary of results {basis states:counts}
+result = backend.run_circuit(bell_circ, n_shots=1000) # process_circuit for 1000 shots 
+print(result.get_counts()) # print a dictionary of results {basis states:counts}
 ```
