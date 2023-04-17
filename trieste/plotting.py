@@ -2,7 +2,7 @@ from pytket.backends.backendresult import BackendResult
 import matplotlib.pyplot as plt
 
 
-def plot_results(result: BackendResult, n_strings: int = 4, dark_mode=False) -> None:
+def plot_results(result: BackendResult, n_strings: int = 4, dark_mode=False, y_limit=700) -> None:
     """
     Plots results in a barchart given a BackendResult. the number of stings displayed
     can be specified with the n_strings argument.
@@ -26,7 +26,7 @@ def plot_results(result: BackendResult, n_strings: int = 4, dark_mode=False) -> 
         color=color_list,
     )
     ax.set_title(label="Results")
-    plt.ylim([0, 700])
+    plt.ylim([0, y_limit])
     plt.xlabel("Basis State")
     plt.ylabel("Number of Shots")
     plt.show()
