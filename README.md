@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/CalMacCQ/Materials_ICTP_Trieste/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/CalMacCQ/Materials_ICTP_Trieste/main?filepath=trieste)
 # ICTP 2023 - Getting Started with TKET
 
 Welcome to ICTP!
